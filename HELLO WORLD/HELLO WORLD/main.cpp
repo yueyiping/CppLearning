@@ -1,8 +1,12 @@
-#include<stdio.h>
+//myfirst.cpp - - displays a message
 
-int main(void)
-{
-	printf("Hello world!");
-	getchar();
-	return 0;
-}
+#include <iostream>								//a PREPROCESSOR directive
+int main()										//function header
+{												//start of function body
+	using namespace std;						//make definitions visible
+	cout << "Come up and C++ me some time.";    //message
+	cout << endl;								//start a new line
+	cout << "You won't regret it!" << endl;     //more output
+	cin.get();									//procedure retention
+	return 0;									//terminate main()
+}												//end of function body
