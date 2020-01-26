@@ -7,6 +7,7 @@ int main()										//function header
 	cout << "Come up and C++ me some time.";    //message
 	cout << endl;								//start a new line
 	cout << "You won't regret it!" << endl;     //more output
-	cin.get();									//procedure retention
+	system("pause");
+	//cin.get();								//procedure retention   
 	return 0;									//terminate main()
 }												//end of function body
