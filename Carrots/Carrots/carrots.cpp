@@ -33,8 +33,9 @@ int main()
 	carrots = carrots + 2;
 	// the next line concatenates output
 	cout << "Now you have " << carrots << " carrots." << endl;
-	cin.get();
-	cin.get();
+	//cin.get();
+	//cin.get();
+	system("pause");
 	return 0;
 }																*/
 
@@ -75,8 +76,9 @@ int main()
 	cin >> count;
 	simon(count);	//call it again
 	cout << "Done!" << endl;
-	cin.get();
-	cin.get();
+	//cin.get();
+	//cin.get();
+	system("pause");
 	return 0;
 }
 
@@ -181,7 +183,26 @@ int main()
 	return 0;
 }																*/
 
-//7
+//5
+#include <iostream>
+float convert(float);
+int main()
+{
+	using namespace std;
+	float shi;
+	cout << "Please input a Celsius value: ";
+	cin >> shi;
+	cout << shi << " degrees Celsius is " << convert(shi) << " degrees Fahrenheit." << endl;
+	system("pause");
+	return 0;
+}
+
+float convert(float n)
+{
+	return 1.8*n + 32;
+}
+
+/*//7
 #include <iostream>
 using namespace std;
 void func(int,int);
@@ -203,4 +224,4 @@ int main()
 void func(int hour, int minute)
 {
 	cout << "Time: " << hour << ":" << minute << endl;
-}
+}																*/
