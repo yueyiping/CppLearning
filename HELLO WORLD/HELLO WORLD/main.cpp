@@ -5,8 +5,8 @@ int main()										//function header
 {												//start of function body
 	using namespace std;						//make definitions visible
 	cout << "Come up and C++ me some time.";    //message
-	cout << endl;								//start a new line
-	cout << "You won't regret it!" << endl;     //more output
+	cout << endl;								//start a new line     "--.\n"
+	cout << "You won't regret it!" << endl;     //more output   
 	system("pause");
 	//cin.get();								//procedure retention   
 	return 0;									//terminate main()
