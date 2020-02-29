@@ -1040,7 +1040,7 @@ void revalue(double r, double * ar, double * pt)
 */
 
 /*
-#include <iostream>	//18.a
+#include <iostream>	//8.a
 using namespace std;
 // constant data
 const int Seasons = 4;
@@ -1076,7 +1076,7 @@ void show(double * da)
 }
 */
 /*
-#include <iostream>	//18.b
+#include <iostream>	//8.b
 const int Seasons = 4;
 const char * Snames[Seasons] = { "Spring", "Summer", "Fall" , "Winter" };
 struct expen
@@ -1118,7 +1118,7 @@ void show(expen * da)
 */
 
 /*
-#include <iostream>
+#include <iostream>	//8.
 using namespace std;
 const int SLEN = 30;
 struct student {
@@ -1192,8 +1192,8 @@ void display3(const student pa[], int n)
 }
 */
 
-
-#include <iostream>
+/*
+#include <iostream>	//10.
 using namespace std;
 double add1(double x, double y);
 double add2(double x, double y); 
@@ -1236,5 +1236,11 @@ double calculate(double x, double y, double(*pf)(double, double))
 	sum = (*pf)(x,y);
 	return sum;
 }
+*/
+
+
+
+
+
 
 
