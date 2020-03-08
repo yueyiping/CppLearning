@@ -68,16 +68,19 @@ void showgolf(const golf & g);
 
 #ifndef __PRACTISE_4_	// 4. 
 #define __PRACTISE_4_
-const int QUARTERS = 4;
-struct Sales
-{
-	double sales[QUARTERS];
-	double average;
-	double max;
-	double min;
-};
-void setSales(Sales & a, const double ar[], int n);
-void setSales(Sales & s);
-void showSales(const Sales &s);
+namespace SALES
+{ 
+	const int QUARTERS = 4;
+	struct Sales
+	{
+		double sales[QUARTERS];
+		double average;
+		double max;
+		double min;
+	};
+	void setSales(Sales & a, const double ar[], int n);
+	void setSales(Sales & s);
+	void showSales(const Sales &s);
+}
 #endif
 

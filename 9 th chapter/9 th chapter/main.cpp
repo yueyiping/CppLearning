@@ -338,10 +338,11 @@ int main()
 */
 
 
-#include <iostream>
+#include <iostream>  //4.
 #include "head.h"
 int main()
 {
+	using namespace SALES;
 	Sales test1, test2;
 	const double arr[3] = { 4.1,1.2,6.5 };
 	setSales(test1, arr, 3);

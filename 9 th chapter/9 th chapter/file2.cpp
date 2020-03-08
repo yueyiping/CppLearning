@@ -146,52 +146,57 @@ void showgolf(const golf & g)
 */
 
 
-#include <iostream>
+#include <iostream> //4.
 #include "head.h"
-using namespace std;
-void setSales(Sales & a, const double ar[], int n)
-{
-	double sum = 0;
-	a.max = ar[0];
-	a.min = ar[0];
-	for (int i = 0; i < n; i++)
-	{
-		a.sales[i] = ar[i];
-		sum += a.sales[i];
-		if (ar[i] > a.max)
-			a.max = ar[i];
-		if (ar[i] < a.min)
-			a.min = ar[i];
-	}
-	a.average = sum / n;
-	for (int i = n; i < 4; i++)
-		a.sales[i] = 0;	
-}
-void setSales(Sales & s)
-{
-	double ar[QUARTERS];
-	int i;
-	cout << "Enter four double numbers: ";
-	for (i = 0; i < QUARTERS; i++)
-	{
-		if (!(cin >> ar[i]))
-			break;
-	}
-	if (i == 0)
-	{ 
-		cout << "None!\n";
-		s.sales[0] = s.sales[1] = s.sales[2] = s.sales[3] = s.average = s.max = s.min = 0;
-	}
-	else
-		setSales(s, ar, i);
-}
-void showSales(const Sales &s)
-{
-	cout << "Sales: ";
-	for (int i = 0; i < QUARTERS; i++)
-		cout << s.sales[i] << " ";
-	cout << "\nMax: " << s.max << endl;
-	cout << "Min: " << s.min << endl;
-	cout << "Average: " << s.average << endl;
-}
 
+namespace SALES
+{
+	using std::cout;
+	using std::cin;
+	using std::endl;
+	void setSales(Sales & a, const double ar[], int n)
+	{
+		double sum = 0;
+		a.max = ar[0];
+		a.min = ar[0];
+		for (int i = 0; i < n; i++)
+		{
+			a.sales[i] = ar[i];
+			sum += a.sales[i];
+			if (ar[i] > a.max)
+				a.max = ar[i];
+			if (ar[i] < a.min)
+				a.min = ar[i];
+		}
+		a.average = sum / n;
+		for (int i = n; i < 4; i++)
+			a.sales[i] = 0;	
+	}
+	void setSales(Sales & s)
+	{
+		double ar[QUARTERS];
+		int i;
+		cout << "Enter four double numbers: ";
+		for (i = 0; i < QUARTERS; i++)
+		{
+			if (!(cin >> ar[i]))
+				break;
+		}
+		if (i == 0)
+		{ 
+			cout << "None!\n";
+			s.sales[0] = s.sales[1] = s.sales[2] = s.sales[3] = s.average = s.max = s.min = 0;
+		}
+		else
+			setSales(s, ar, i);
+	}
+	void showSales(const Sales &s)
+	{
+		cout << "Sales: ";
+		for (int i = 0; i < QUARTERS; i++)
+			cout << s.sales[i] << " ";
+		cout << "\nMax: " << s.max << endl;
+		cout << "Min: " << s.min << endl;
+		cout << "Average: " << s.average << endl;
+	}
+}
